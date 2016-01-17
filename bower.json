@@ -1,9 +1,9 @@
 {
-  "name": "keep",
-  "description": "",
+  "name": "AngularSymfonyGl",
+  "description": "TODO Application",
   "main": "app.module.js",
   "authors": [
-    "Denis Gorbunov"
+    "Taras Zubenko"
   ],
   "license": "ISC",
   "moduleType": [],
