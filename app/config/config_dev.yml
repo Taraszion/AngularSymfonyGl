@@ -2,6 +2,10 @@ imports:
     - { resource: config.yml }
 
 framework:
+    serializer:
+        enabled: true
+        cache: serializer.mapping.cache.apc
+        
     router:
         resource: "%kernel.root_dir%/config/routing_dev.yml"
         strict_requirements: true
@@ -10,7 +14,7 @@ framework:
 web_profiler:
     toolbar: true
     intercept_redirects: false
-
+    
 monolog:
     handlers:
         main:
