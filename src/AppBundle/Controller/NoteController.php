@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class NoteController extends Controller
 {
-    /**
+	/**
      * @Route("/note", name="note_get_all")
      * @Method("GET")
      */

@@ -10,7 +10,7 @@
 
 			function getNotes()
 			{
-				return $http.get('/note')
+				return $http.get('note')
 					.then(function(response)
 					{
 						return response.data;
@@ -24,7 +24,7 @@
 
 			function saveNote(note)
 			{
-				return $http.post('/note', note)
+				return $http.post('note', note)
 					.then(function(response)
 					{
 						return response.data;
