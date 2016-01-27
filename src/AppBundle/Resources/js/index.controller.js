@@ -6,6 +6,11 @@
 			{
 				$scope.notes = notes;
 			});
+			
+			function test()
+				{
+					window.alert('azazaza');
+				}
 		})
 	;
 })();

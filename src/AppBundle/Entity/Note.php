@@ -35,6 +35,13 @@ class Note
      */
     private $content;
 
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="done", type="string", length=300, nullable=false)
+     */
+    private $done;
+	
 
     /**
      * Get id
@@ -92,6 +99,30 @@ class Note
     public function getContent()
     {
         return $this->content;
+    }
+	
+	    /**
+     * Set done
+     *
+     * @param string $content
+     *
+     * @return Note
+     */
+    public function setDone($content)
+    {
+        $this->done = $content;
+
+        return $this;
+    }
+
+    /**
+     * Get done
+     *
+     * @return string
+     */
+    public function getDone()
+    {
+        return $this->done;
     }
 }
 

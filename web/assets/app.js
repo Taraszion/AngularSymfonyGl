@@ -4,12 +4,28 @@
 
 (function(){
 	angular.module('app')
+		.directive('customcontent', function()
+		{
+			return {
+				templateUrl: "customcontent.html"
+			};
+		})
+	;
+})();
+
+(function(){
+	angular.module('app')
 		.controller('IndexController', function($scope, NoteService)
 		{
 			NoteService.getNotes().then(function(notes)
 			{
 				$scope.notes = notes;
 			});
+			
+			function test()
+				{
+					window.alert('azazaza');
+				}
 		})
 	;
 })();
@@ -72,8 +88,26 @@
 		.directive('note', function()
 		{
 			return {
-				templateUrl: "note.html"
+				templateUrl: "note.html",
+
+				controller: NoteController
 			};
+			
+			function NoteController($scope, NoteService)
+			{
+				$scope.del = del;
+				$scope.edit = edit;
+
+				function del()
+				{
+					window.alert('DELETE');
+				}
+				
+				function edit()
+				{
+					window.alert('EDIT');
+				}
+			}
 		})
 	;
 })();
