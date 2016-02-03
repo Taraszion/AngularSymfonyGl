@@ -1,8 +1,11 @@
 <li class="collection-item avatar">
-	<i class="material-icons" ng-bind=note.done></i>
+	<i class="material-icons" ng-click="done(note.done);" ng-if="note.done == 1">done</i>
+	<i class="material-icons" ng-click="done(note.done);" ng-if="note.done == 0">not_interested</i>
 	<span class="title" ng-bind=note.title></span>
 	<p ng-bind=note.content></p>
-	<a href="#" class="secondary-content"><i class="material-icons" ng-click="edit();">edit</i><i class="material-icons" ng-click="del();">delete</i></a>
+	<a href="#" class="secondary-content">
+		<i class="material-icons" ng-click="edit();">edit</i>
+		<i class="material-icons" ng-click="del();">delete</i></a>
 </li>
 
 <!--div class="card hoverable">

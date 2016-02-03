@@ -38,6 +38,7 @@ class NoteController extends Controller
         $note = new Note();
         $note->setTitle($payload['title']);
         $note->setContent($payload['content']);
+		$note->setDone(0);
 
         /** @var EntityManager $em */
         $em = $this->getDoctrine()->getManager();

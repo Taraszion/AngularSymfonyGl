@@ -36,9 +36,9 @@ class Note
     private $content;
 
 	/**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="done", type="string", length=300, nullable=false)
+     * @ORM\Column(name="done", type="integer", nullable=false)
      */
     private $done;
 	
@@ -104,7 +104,7 @@ class Note
 	    /**
      * Set done
      *
-     * @param string $content
+     * @param int $content
      *
      * @return Note
      */
@@ -118,7 +118,7 @@ class Note
     /**
      * Get done
      *
-     * @return string
+     * @return int
      */
     public function getDone()
     {

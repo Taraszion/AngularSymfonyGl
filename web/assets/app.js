@@ -107,6 +107,11 @@
 				{
 					window.alert('EDIT');
 				}
+				
+				function done()
+				{
+					window.alert('DONE');
+				}
 			}
 		})
 	;
