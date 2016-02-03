@@ -18,7 +18,7 @@
 {% block body %}
     <div ng-app="app" ng-controller="IndexController">
         <navigation></navigation>
-
+		<input type="text" width="300" ng-model="searchquery">
         <div class="content">
             <div class="row">
                 <div class="col s4 offset-s4">
@@ -31,7 +31,7 @@
                 <!--/div-->
             <!--/div-->
         </div>
-		<ul class="collection" ng-repeat="note in notes">
+		<ul class="collection" ng-repeat="note in notes | filter: searchquery">
 						<note></note>
 					</ul>
 		<customcontent></customcontent>
